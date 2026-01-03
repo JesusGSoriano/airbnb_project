@@ -2,6 +2,7 @@
 with source as (
     select *
     from public.raw_listings
+    where id is not null
 )
 
 select

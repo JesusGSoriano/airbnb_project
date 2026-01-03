@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: mart_listing_performance
+    description: "Curated listing-level metrics combining listings and reviews for performance analysis."
+
+    columns:
+      - name: listing_id
+        description: "Unique identifier for each Airbnb listing"
+        tests:
+          - not_null
+          - unique
+
+      - name: number_of_reviews
+        description: "Total number of reviews for the listing"
+
+      - name: review_scores_rating
+        description: "Average review rating of the listing"
+
+      - name: total_reviews_comments
+        description: "Number of individual review records from reviews table"
